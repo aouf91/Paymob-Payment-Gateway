@@ -10,7 +10,7 @@ server.use(express.static('public'));
 
 // view engine setup
 server.use(expressLayouts)
-server.set('layout', './layouts/base')
+server.set('layout', './layouts/hello')
 server.set('view engine', 'ejs');
 
 connect();
