@@ -1,4 +1,5 @@
-import express from "express";
+import express from "express"
+import path from "path"
 import router from "./routes/index.js";
 import expressLayouts from 'express-ejs-layouts';
 import connect from './database/db.js';
@@ -10,7 +11,12 @@ server.use(express.static('public'));
 
 // view engine setup
 server.use(expressLayouts)
-server.set('layout', './layouts/base')
+
+
+server.set('layout', path.join(__dirname, '/views/layouts/base'))
+
+path.join(__dirname, '/views/layouts/base')
+
 server.set('view engine', 'ejs');
 
 connect();
