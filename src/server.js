@@ -1,8 +1,13 @@
 import express from "express"
-import path from "path"
 import router from "./routes/index.js";
 import expressLayouts from 'express-ejs-layouts';
 import connect from './database/db.js';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename
 
 const PORT = 3000 || process.env.PORT;
 const server = express();
