@@ -10,10 +10,10 @@ import orders from './v1/order.js';
 const server = express.Router();
 
 server.get('/', (req, res) => {
-
-    return res.render('info'
+res.send(__dirname)
+   // return res.render('info'
 //, { layout: './layouts/base' }
-)
+// )
 });
 
 server.use('/checkout', pay);
