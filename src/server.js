@@ -23,6 +23,8 @@ server.use(expressLayouts)
 
 server.set('layout', path.join(__dirname, '/views/layouts/base'))
 
+server.set('views', path.join(__dirname, 'views'));
+
 server.set('view engine', 'ejs');
 
 connect();
