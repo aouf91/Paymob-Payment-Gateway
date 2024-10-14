@@ -11,7 +11,7 @@ const server = express.Router();
 
 server.get('/', (req, res) => {
 
-    return res.render('info', { layout: './layouts/base' })
+    return res.render('info.ejs', { layout: './layouts/base' })
 });
 
 server.use('/checkout', pay);
