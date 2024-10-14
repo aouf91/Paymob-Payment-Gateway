@@ -7,6 +7,13 @@ import state from './v1/state.js';
 import processed from './v1/callback.js';
 import orders from './v1/order.js';
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
 const server = express.Router();
 
 server.get('/', (req, res) => {
