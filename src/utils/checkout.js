@@ -24,6 +24,7 @@ export async function pay(order_cart, billing_data, amount_cents) {
     items: order_cart,
   };
   const order = await axios.post(orderUrl, orderData, { headers });
+console.log(order);
   const orderId = order.id;
 
   // Payment Key Request  -- step 3 in the docs
