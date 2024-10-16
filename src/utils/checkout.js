@@ -36,7 +36,7 @@ export async function pay(order_cart, billing_data, amount_cents) {
     order_id: orderId,
     billing_data,
     currency: "EGP",
-    integration_id: 2329228, // Replace with your integration id
+    integration_id:4853272 , // Replace with your integration id
   };
   const paymentKey = await axios.post(paymentKeyUrl, paymentKeyData, headers);
   return paymentKey.token;
