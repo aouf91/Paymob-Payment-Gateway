@@ -12,7 +12,8 @@ server.post("/", async (req, res, next) => {
     const token = await pay(order_cart, billing_data, amount_cents);
 
     // create the payment link
-    const link = `https://accept.paymob.com/api/acceptance/iframes/416800?payment_token=${token}`;
+    const link = `https://accept.paymob.com/api/acceptance/iframes/874327?payment_token=${token}`;
+
 
     // respond with the payment link
     return res.status(200).json(link);
