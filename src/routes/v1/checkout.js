@@ -7,6 +7,7 @@ server.post("/", async (req, res, next) => {
   try {
     // Get the order_cart, billing_data, amount_cents from the request body
     const { order_cart, billing_data, amount_cents } = req.body;
+console.log(req.body)
 
     // get the payment token for this order
     const token = await pay(order_cart, billing_data, amount_cents);
