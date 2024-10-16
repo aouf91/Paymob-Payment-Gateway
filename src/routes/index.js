@@ -11,6 +11,7 @@ import orders from './v1/order.js';
 const server = express.Router();
 
 server.get('/', (req, res) => {
+console.log("basala")
 
    return res.render('info'
 , { layout: './layouts/base' }
