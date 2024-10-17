@@ -10,7 +10,7 @@ const PAYMOB_URL = "https://accept.paymob.com/api";
 export async function pay(order_cart, billing_data, amount_cents) {
   // Authentication Request -- step 1 in the docs
   const accessToken = await authenticate();
-
+console.log("access token",accessToken)
   // Order Registration API -- step 2 in the docs
   const orderUrl = `${PAYMOB_URL}/ecommerce/orders`;
   const headers = {
