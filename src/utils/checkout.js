@@ -34,7 +34,7 @@ console.log("order",order);
     auth_token: accessToken,
     amount_cents,
     expiration: 3600,
-    order_id: orderId,
+    //order_id: orderId,
     billing_data,
     currency: "EGP",
     integration_id:4853272 , // Replace with your integration id
