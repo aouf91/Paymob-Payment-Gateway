@@ -25,10 +25,10 @@ console.log("access token",accessToken)
   };
   const order = await axios.post(orderUrl, orderData, { headers });
 console.log("order",order);
-  const orderId = order.id;
+  //const orderId = order.id;
 
   // Payment Key Request  -- step 3 in the docs
-  const paymentKeyUrl = `${PAYMOB_URL}/acceptance/payment_keys`;
+  const paymentKeyUrl = `${PAYMOB_URL}/ecommerce/payment_keys`;
 
   const paymentKeyData = {
     auth_token: accessToken,
