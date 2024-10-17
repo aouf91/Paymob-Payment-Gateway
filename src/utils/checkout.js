@@ -40,6 +40,6 @@ console.log("order",order);
     integration_id:4853272 , // Replace with your integration id
   };
   const paymentKey = await axios.post(paymentKeyUrl, paymentKeyData, headers);
-console.log("paymentKey",paymentkey)
+console.log("paymentKey",paymentKey)
   return paymentKey.token;
 }
