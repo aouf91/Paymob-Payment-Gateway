@@ -14,6 +14,7 @@ const __dirname = dirname(__filename)
 const PORT = 3000 || process.env.PORT;
 const server = express();
 server.use(express.json());
+server.use(express.urlencoded({ extended: true }));
 server.use(express.static('public'));
 
 // view engine setup
