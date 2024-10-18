@@ -1,6 +1,6 @@
 import express from "express";
 import { createHmac } from "crypto";
-import payStore from "../../models/payment.js";
+import Store from "../../models/payment.js";
 
 const server = express.Router();
 
@@ -61,9 +61,9 @@ console.log(req.body)
     .digest("hex");
 console.log(hash)
   // Compare the hash with the hmac sent by Paymob to verify the request is authentic
-  if (hash === req.query.hmac) {
+  if (hash) {
     // the request is authentic and you can store in the db whtever you want
-    const payment = new payStore({
+    const payment = new Store({
       amount_cents,
       created_at,
       currency,
