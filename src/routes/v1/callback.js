@@ -30,7 +30,7 @@ server.post("/", async (req, res, next) => {
     },
     success,
   } = req.body.obj;
-console.log(req.body)
+console.log(req.body.obj)
 
   // Create a lexogragical string with the order specified by Paymob @ https://docs.paymob.com/docs/hmac-calculation
   let lexogragical =
