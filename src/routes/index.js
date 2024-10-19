@@ -16,6 +16,13 @@ server.get('/', (req, res) => {
 )
 });
 
+
+server.get('/chat', (req, res) => {
+    return res.render('chat')
+})
+
+
+
 server.use('/checkout', pay);
 server.use('/refund', refund);
 server.use('/void', voidTrx);
