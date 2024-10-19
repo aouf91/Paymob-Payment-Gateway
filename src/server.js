@@ -1,4 +1,13 @@
 import express from "express";
+import { createServer } from 'node:http';
+const app = express();
+const server = createServer(app);
+
+app.get('/', (req, res) => {
+  res.send('<h1>Hello world</h1>');
+});
+
+
 import router from "./routes/index.js";
 import expressLayouts from 'express-ejs-layouts';
 import connect from './database/db.js';
@@ -12,21 +21,20 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename)
 
 const PORT = 3000 || process.env.PORT;
-const server = express();
-server.use(express.json());
-server.use(express.urlencoded({ extended: true }));
-server.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 // view engine setup
-server.use(expressLayouts)
-server.set('layout', './layouts/base')
-server.set('view engine', 'ejs');
+app.use(expressLayouts)
+app.set('layout', './layouts/base')
+app.set('view engine', 'ejs');
 
-server.set('views', path.join(__dirname,'..', 'views'));
+app.set('views', path.join(__dirname,'..', 'views'));
 
 connect();
 
-server.use("/api", router);
+app.use("/api", router);
 
 server.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
