@@ -2,9 +2,11 @@
 <html>
   <head>
     <title>Socket.IO Chat</title>
-    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://cdn.socket.io/4.8.0/socket.io.min.js"></script>
     <script>
-      var socket = io(); // Establish connection
+      const socket = io({
+  transports: ['websocket']
+}); // Establish connection
 
       // Listen for the 'chat message' event from the server
       socket.on('chat message', function(msg){
