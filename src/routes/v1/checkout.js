@@ -47,7 +47,7 @@ fetch("https://accept.paymob.com/v1/intention/", requestOptions)
   .then((response) => response.text())
   .then((result) =>{
 let clientSecret=JSON.parse(result).client_secret;
-res.rediret(`https://accept.paymob.com/unifiedcheckout/?publicKey=${process.env.PUBLIC_KEY}&clientSecret=${clientSecret}`)
+res.redirect(`https://accept.paymob.com/unifiedcheckout/?publicKey=${process.env.PUBLIC_KEY}&clientSecret=${clientSecret}`)
 
 })
 
