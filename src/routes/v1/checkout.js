@@ -11,13 +11,13 @@ myHeaders.append(
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  amount: 24000,
+  amount: 2400000,
   currency: "EGP",
   payment_methods: [4853344,4853272],
   items: [
         {
       "name": "iphone x",
-      "amount": "24000",
+      "amount": "2400000",
       "description": "iphone x 64GB",
       "quantity": "1"
     },
