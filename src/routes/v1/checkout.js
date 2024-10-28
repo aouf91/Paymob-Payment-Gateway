@@ -45,7 +45,7 @@ var requestOptions = {
 
 fetch("https://accept.paymob.com/v1/intention/", requestOptions)
   .then((response) => response.text())
-  .then((result) => console.log(result))
+  .then((result) => console.log(result.client_secret))
   .catch((error) => console.log("error", error));
 
    
