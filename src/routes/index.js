@@ -18,6 +18,7 @@ server.get('/', (req, res) => {
 
 
 server.get('/success', (req, res) => {
+console.log(req.query)
     return res.render('success'
 , { layout: './layouts/base' }
 )
