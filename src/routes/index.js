@@ -17,6 +17,13 @@ server.get('/', (req, res) => {
 });
 
 
+server.get('/success', (req, res) => {
+    return res.render('success'
+, { layout: './layouts/base' }
+)
+});
+
+
 server.get('/chat', (req, res) => {
     return res.render('chat')
 })
