@@ -60,7 +60,7 @@ console.log(req.body.obj)
     .update(lexogragical)
     .digest("hex");
 console.log(hash)
-console.log(req.query)
+console.log(req.query.hmac)
   // Compare the hash with the hmac sent by Paymob to verify the request is authentic
   if (hash) {
     // the request is authentic and you can store in the db whtever you want
